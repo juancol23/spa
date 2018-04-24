@@ -3741,3 +3741,10 @@ body {
     padding: 0;
   }
 }
+
+@media (min-width: 993px) { 
+ .title-modern{
+  font-size:5.2em !important;
+ }
+
+}

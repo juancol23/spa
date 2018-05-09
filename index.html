@@ -362,7 +362,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form action="https://estudiojuridicouhty.000webhostapp.com/sendemail.php" method="post">
 
             <p>Completa el siguiente formulario para reservar tu cita</p>
 
@@ -390,7 +390,7 @@
 
 
 
-               <button id="search" >Enviar</button>  
+               <input type="submit"  value="dale-dale" />
 
             </form>
           </div>
@@ -443,31 +443,31 @@
   
 <script>
  
-       $('#search').click(function(){
+       // $('#search').click(function(){
 
-          var nombre= $("#nombre").val();
-          var email= $("#email").val();
-          var telefono= $("#telefono").val();
-          var mensaje= $("#mensaje").val();
+          // var nombre= $("#nombre").val();
+          // var email= $("#email").val();
+          // var telefono= $("#telefono").val();
+          // var mensaje= $("#mensaje").val();
          
-                  $(document).ready(function() {
-                     var request = $.ajax({
-                      method: "POST",
-                          url: "https://sppsa.000webhostapp.com/sendemail.php",
-                       data: { nombre : nombre, email : email, telefono: telefono, mensaje: mensaje },
-                       dataType: "JSON"
-                     });
+          //         $(document).ready(function() {
+          //            var request = $.ajax({
+          //             method: "POST",
+          //                 url: "https://sppsa.000webhostapp.com/sendemail.php",
+          //              data: { nombre : nombre, email : email, telefono: telefono, mensaje: mensaje },
+          //              dataType: "JSON"
+          //            });
                       
-                     request.done(function( msg ) {
-                       alert("msg"+msg)
-                     });
+          //            request.done(function( msg ) {
+          //              alert("msg"+msg)
+          //            });
                       
-                     request.fail(function( jqXHR, textStatus ) {
-                       alert( "Request failed: " + textStatus );
-                     });
+          //            request.fail(function( jqXHR, textStatus ) {
+          //              alert( "Request failed: " + textStatus );
+          //            });
                         
-                 });
-           });
+          //        });
+          //  });
   </script>
 
 

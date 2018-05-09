@@ -1332,7 +1332,7 @@ a,
 }
 
 .navbar-default {
-  background-color: white;
+  background-color: #e78b90;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .navbar-default .navbar-nav > li > a:not(.btn) {
@@ -1400,7 +1400,7 @@ a,
   background-color: transparent;
 }
 .navbar-transparent .navbar-toggle .icon-bar {
-  background-color: #FFFFFF;
+  background-color: #e78b90;
 }
 
 .navbar.navbar-fixed-top {

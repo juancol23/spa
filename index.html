@@ -21,8 +21,8 @@
 
 <body>
 
-    <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="200">
-        <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
+   <nav class="navbar navbar-default navbar-fixed-top" color-on-scroll="200" "> 
+    <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
         <div class="container">
             <div class="navbar-header">
                 <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
@@ -41,8 +41,8 @@
                         
                     </li>
                     <li class="dropdown">
-                        <a href="#" id="scrroller" class="dropdown-toggle" data-toggle="modal" data-target="#exampleModal" data-toggle="dropdown">
-                            <i class= "fa fa-share-alt"></i>¡Pide lo Yas!</a>
+                        <a href="#" id="scrroller" style="color: white !important" class="dropdown-toggle" data-toggle="modal" data-target="#exampleModal" data-toggle="dropdown">
+                           ¡ Contactanos !</a>
 
 
                             <!-- Button trigger modal -->
@@ -346,7 +346,7 @@
             </div>
             <hr>
             <div class="copyright">
-                 © <script> document.write(new Date().getFullYear()) </script> Desarrollado y creado por empresas Riva
+                 © <script> document.write(new Date().getFullYear()) </script> Desarrollado por tecnología y servicios  RIVA
             </div>
         </div>
     </footer>
@@ -356,15 +356,15 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">¡Solicitalo ahora!</h5>
+          <div class="modal-header" style="background: #e78b90; color: white; "> 
+            <h5 class="modal-title" id="exampleModalLabel">¡ Contactanos !</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: -22px !important; "> <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
             <form action="https://estudiojuridicouhty.000webhostapp.com/sendemail.php" method="post">
 
-            <p>Completa el siguiente formulario para reservar tu cita</p>
+            <p>Completa el siguiente formulario para reservar tu cita.</p>
 
               <div class="form-group">
                 <label for="message-text" class="col-form-label">Nombre:</label>
@@ -376,8 +376,6 @@
                 <input type="text" name="email"  id="email" placeholder="Ingresa tu correo electronico" class="form-control" id="email" required="required">
               </div>
 
-              
-
                <div class="form-group">
                 <label for="message-text" class="col-form-label">Telefono:</label>
                 <input class="form-control" name="telefono"  id="telefono"  placeholder="¿Cúal es tu telefono?"  id="message-text" required="required"></textarea>
@@ -387,15 +385,13 @@
                 <label for="message-text" class="col-form-label">Mensaje:</label>
                 <textarea class="form-control" name="mensaje"  id="mensaje"  placeholder="Explicanos lo que necesitas"  id="message-text" required="required"></textarea>
               </div>
-
-
-
-               <input type="submit"  value="dale-dale" />
+        
 
             </form>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <div class="modal-footer" style="text-align: center !important">
+           <input type="submit" class="btn btn-danger btn-fill" value="Solicitar Cita" />
+            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> -->
            <!--  <button type="button" style="background: #000000 !important;color: white !important;cursor: pointer !important;border: 1px solid white; " class="btn btn-success" data-dismiss="modal">Enviar mensaje</button> -->
         </div>
       </div>

@@ -1,9 +1,9 @@
 <?php
 // Multiple recipients
-$to = 'valdcolra@gmail.com'; // note the comma
+$to = 'oasis.spa.pucallpa@gmail.com'; // note the comma
 
 // Subject
-$subject = 'Spa OASIS ';
+$subject = 'Solicitud de servicio';
 $nombre   = $_POST['nombre'];
 $email    =  $_POST['email'];
 $mensaje   = $_POST['mensaje'];
@@ -12,7 +12,7 @@ $telefono   = $_POST['telefono'];
 $message = '
 <html>
 <head>
-  <title>Title Spa</title>
+  <title>Solicitud de servicio</title>
 </head>
 <body>
   <p>El cliente ha solicitado por medio del sitio web una cita al '.$subject.'</p>
@@ -40,10 +40,10 @@ $headers[] = 'MIME-Version: 1.0';
 $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 
 // Additional headers
-$headers[] = 'To: Mary <mary@example.com>, Kelly <kelly@example.com>';
-$headers[] = 'From: OASIS <oasis@example.com>';
-$headers[] = 'Cc: birthdayarchive@example.com';
-$headers[] = 'Bcc: birthdaycheck@example.com';
+// $headers[] = 'To: Mary <mary@example.com>, Kelly <kelly@example.com>';
+$headers[] = 'From: OASIS WEB <oasis.spa.pucallpa@gmail.com>';
+// $headers[] = 'Cc: birthdayarchive@example.com';
+// $headers[] = 'Bcc: birthdaycheck@example.com';
 
 // Mail it
 mail($to, $subject, $message, implode("\r\n", $headers));

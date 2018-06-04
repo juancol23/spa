@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <title>Mi primer CRUD con Firebase</title>
+
+    <!-- Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+  </head>
+  <style>
+    body{
+ 
+    text-align: center;
+          background: #2c3338;
+
+      }
+  </style>
+  <body>
+
+
+  <!--   <nav style="text-align: center;">
+      <ul class="dropdown" >
+              <li><a href="#"  style="font-weight: 600; transition: .3s;" onclick="addUser()">Registrar Vendedor</a>
+
+              </li>
+
+              <li><a href="#"  style="font-weight: 600; transition: .3s;background: #ff000091; position: relative; color: #fff;">Registrar Soat</a>
+              
+              </li>
+
+            
+
+              <li><a href="#"  style="font-weight: 600; transition: .3s" onclick="cerrar()">Cerrar Sesión</a>
+              </li>
+            </ul>
+    </nav> -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+ 
+  <div style="padding:  2em; bask: red; background: #ececec; ">
+      <h4>Registro Spa Productos</h4>
+      <input type="text" id="titulo" placeholder="Titulo" class="form-control my-3">
+      <input type="text" id="sumilla" placeholder="Sumilla" class="form-control my-3">
+      <!-- <textarea type="text" id="descripcion" placeholder="Descripcion" class="form-control my-3"> </textarea>  -->
+      <input type="text" id="urlImagen" placeholder="Url Imagen" class="form-control my-3">
+      <img src="" id="imagen_preview" width="200px" alt="">
+      <!-- <input type="text" id="autor" placeholder="Autor" value="El camaleón jurídico" class="form-control my-3"> -->
+      
+     
+      <br>
+       
+
+
+
+      <br><br>
+      <button class="btn btn-info" id="boton" onclick="guardar()">REGISTRAR</button>
+
+
+        <table class="table my-3">
+            <thead>
+              <tr>
+                <th scope="col">Título</th>
+                <th scope="col">Sumilla</th>    
+                <!-- <th scope="col">Descripción</th>     -->
+                <th scope="col">urlImagen</th>
+                <!-- <th scope="col">autor</th> -->
+                <th scope="col">fecha</th>
+                <th scope="col">Eliminar</th>
+                <th scope="col">Editar</th>
+              </tr>
+            </thead>
+            <tbody id="tabla">
+
+            </tbody>
+        </table>
+</div>
+    </div>
+         <h4 id="usuario" style="display: none"></h4>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="registro.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+
+    <script>
+      $("#urlImagen").keyup(function () {
+            var value = $(this).val();
+            $("#imagen_preview").prop("src",value);
+          }).keyup();
+      </script>
+     
+
+  </body>
+</html>

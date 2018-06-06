@@ -159,6 +159,14 @@ function eliminar(id){
         }
 
 
+        
+ var url_redi_local = 'http://localhost/spa/publicar.html';
+ var url_redi_remote = 'http://oasispucallpa.com/publicar.html';
+
+
+
+
+
         function cerrar_(){
             firebase.auth().signOut()
             .then(function(){

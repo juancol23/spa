@@ -93,7 +93,6 @@ db.collection("spaoasis").onSnapshot((querySnapshot) => {
 
         <td><button class="btn btn-danger" onclick="eliminar('${doc.id}')">Eliminar</button></td>
         <td><button class="btn btn-warning" onclick="editar('${doc.id}','${doc.data().titulo}','${doc.data().sumilla}','${doc.data().urlImagen}')">Editar</button></td>
-
  
         
         </tr>
@@ -158,4 +157,25 @@ function eliminar(id){
                 console.error("Error updating document: ", error);
             });
         }
+
+
+        function cerrar_(){
+            firebase.auth().signOut()
+            .then(function(){
+                console.log('Saliendo...')
+                if(url_condition == "http://localhost/"){
+                  console.log("Test"); 
+                  location.href= url_redi_local;
+                }else{
+                 console.log("Producción")
+                 location.href= url_redi_remote;
+                }
+            })
+            .catch(function(error){
+                console.log(error)
+            })
+        }
+
+        
+        
 }

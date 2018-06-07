@@ -22,10 +22,10 @@
               console.log('Saliendo...')
               if(url_redi_local == "http://localhost/"){
                   console.log("Test"); 
-                  location.href= "http://localhost/login.html";
+                  location.href= "http://localhost/login";
               }else{
                   console.log("Producción")
-                  location.href= "http://oasispucallpa.com/login.html";
+                  location.href= "http://oasispucallpa.com/login";
               }
           })
           .catch(function(error){
